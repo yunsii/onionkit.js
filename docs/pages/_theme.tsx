@@ -12,16 +12,6 @@ const theme: Theme = (props) => {
     logo: <div style={{ fontSize: '20px' }}>Onionkit.js</div>,
     topNavs: [
       {
-        label: 'Components',
-        path: '/components',
-        activeIfMatch: '/components',
-      },
-      {
-        label: 'Hooks',
-        path: '/hooks',
-        activeIfMatch: '/hooks',
-      },
-      {
         label: 'Onionkit.js',
         href: 'https://github.com/yunsii/starter-vite-react-library',
       },
