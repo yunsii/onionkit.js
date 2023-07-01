@@ -1,7 +1,7 @@
 {
   "name": "onionkit",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.0",
   "author": "Yuns <yuns.xie@qq.com>",
   "license": "MIT",
   "type": "module",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@antfu/eslint-config-react": "^0.35.3",
+    "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@commitlint/types": "^17.4.4",
@@ -78,5 +79,9 @@
   },
   "dependencies": {
     "cross-fetch": "^3.1.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   }
 }
