@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.16.0
-        version: 3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@2.7.1))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)
+        version: 3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@3.5.0))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)
       '@antfu/eslint-config-react':
         specifier: ^0.35.3
         version: 0.35.3(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)
@@ -35,13 +35,10 @@ importers:
         version: 1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6)
       '@jannajs/lint':
         specifier: ^3.1.1
-        version: 3.1.1(fqjaxehb4y44niiifxm4vq66gi)
+        version: 3.1.1(kkyrlrdsogainhs2vsyogrshju)
       '@mdx-js/react':
         specifier: ^2.3.0
         version: 2.3.0(react@18.2.0)
-      '@prettier/plugin-xml':
-        specifier: ^3.4.1
-        version: 3.4.1(prettier@2.7.1)
       '@rollup/plugin-typescript':
         specifier: ^8.3.4
         version: 8.3.4(rollup@3.26.0)(tslib@2.4.0)(typescript@5.1.6)
@@ -66,9 +63,6 @@ importers:
       eslint:
         specifier: ^9.20.0
         version: 9.20.0(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: ^8.6.0
-        version: 8.8.0(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-format:
         specifier: ^0.1.3
         version: 0.1.3(eslint@9.20.0(jiti@2.4.2))
@@ -84,9 +78,6 @@ importers:
       lint-staged:
         specifier: ^15.4.3
         version: 15.4.3
-      prettier:
-        specifier: ^2.7.1
-        version: 2.7.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1841,12 +1832,6 @@ packages:
     resolution: {integrity: sha512-wjBmJ8TAb67G2or/gBp/H62uCIkDCjpCmlGPSG41/7QagUjMgh+iegVB3gY8eNYhTAmecjKtclT4wGAjHz5yWA==}
     peerDependencies:
       eslint: ^9.5.0
-
-  eslint-config-prettier@8.8.0:
-    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
 
   eslint-flat-config-utils@1.1.0:
     resolution: {integrity: sha512-W49wz7yQJGRfg4QSV3nwdO/fYcWetiSKhLV5YykfQMcqnIATNpoS7EPdINhLB9P3fmdjNmFtOgZjiKnCndWAnw==}
@@ -4889,7 +4874,7 @@ snapshots:
       - jest
       - supports-color
 
-  '@antfu/eslint-config@3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@2.7.1))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)':
+  '@antfu/eslint-config@3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@3.5.0))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)':
     dependencies:
       '@antfu/install-pkg': 1.0.0
       '@clack/prompts': 0.9.1
@@ -4929,7 +4914,7 @@ snapshots:
       yargs: 17.7.2
     optionalDependencies:
       '@eslint-react/eslint-plugin': 1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6)
-      '@prettier/plugin-xml': 3.4.1(prettier@2.7.1)
+      '@prettier/plugin-xml': 3.4.1(prettier@3.5.0)
       eslint-plugin-format: 0.1.3(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.1.0(eslint@9.20.0(jiti@2.4.2))
       eslint-plugin-react-refresh: 0.4.19(eslint@9.20.0(jiti@2.4.2))
@@ -5652,9 +5637,9 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@jannajs/lint@3.1.1(fqjaxehb4y44niiifxm4vq66gi)':
+  '@jannajs/lint@3.1.1(kkyrlrdsogainhs2vsyogrshju)':
     dependencies:
-      '@antfu/eslint-config': 3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@2.7.1))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)
+      '@antfu/eslint-config': 3.16.0(@eslint-react/eslint-plugin@1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6))(@prettier/plugin-xml@3.4.1(prettier@3.5.0))(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@0.1.3(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.19(eslint@9.20.0(jiti@2.4.2)))(eslint@9.20.0(jiti@2.4.2))(typescript@5.1.6)(vitest@0.32.2)
       '@antfu/ni': 0.23.2
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@commitlint/cli': 19.7.1(@types/node@18.6.2)(typescript@5.1.6)
@@ -5662,7 +5647,7 @@ snapshots:
       '@commitlint/is-ignored': 19.7.1
       '@commitlint/types': 19.5.0
       '@eslint-react/eslint-plugin': 1.26.2(eslint@9.20.0(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.1.6))(typescript@5.1.6)
-      '@prettier/plugin-xml': 3.4.1(prettier@2.7.1)
+      '@prettier/plugin-xml': 3.4.1(prettier@3.5.0)
       commander: 12.1.0
       consola: 3.4.0
       eslint: 9.20.0(jiti@2.4.2)
@@ -5798,10 +5783,10 @@ snapshots:
 
   '@polka/url@1.0.0-next.21': {}
 
-  '@prettier/plugin-xml@3.4.1(prettier@2.7.1)':
+  '@prettier/plugin-xml@3.4.1(prettier@3.5.0)':
     dependencies:
       '@xml-tools/parser': 1.0.11
-      prettier: 2.7.1
+      prettier: 3.5.0
 
   '@remix-run/router@1.7.0': {}
 
@@ -6955,10 +6940,6 @@ snapshots:
   eslint-config-flat-gitignore@1.0.1(eslint@9.20.0(jiti@2.4.2)):
     dependencies:
       '@eslint/compat': 1.2.6(eslint@9.20.0(jiti@2.4.2))
-      eslint: 9.20.0(jiti@2.4.2)
-
-  eslint-config-prettier@8.8.0(eslint@9.20.0(jiti@2.4.2)):
-    dependencies:
       eslint: 9.20.0(jiti@2.4.2)
 
   eslint-flat-config-utils@1.1.0:
