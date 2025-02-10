@@ -1,5 +1,11 @@
 # onionkit
 
+## 0.0.1-beta.3
+
+### Patch Changes
+
+- 🐛 fix: type of list releases response
+
 ## 0.0.1-beta.2
 
 ### Patch Changes
