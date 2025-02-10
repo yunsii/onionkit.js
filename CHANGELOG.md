@@ -1,5 +1,11 @@
 # onionkit
 
+## 0.0.1-beta.2
+
+### Patch Changes
+
+- ♻️ chore: no root alias
+
 ## 0.0.1-beta.1
 
 ### Patch Changes
