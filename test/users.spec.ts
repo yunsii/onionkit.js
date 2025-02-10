@@ -1,4 +1,4 @@
-import { expect } from 'vitest'
+import { expect, it } from 'vitest'
 
 import { Onionkit } from '../src'
 
@@ -8,6 +8,7 @@ const onionkit = new Onionkit({
 
 it(`获取个人信息`, async () => {
   const result = await onionkit.me()
-  expect(result).haveOwnProperty('id')
-  expect(result).haveOwnProperty('name')
+  expect(result.Response).haveOwnProperty('User')
+  expect(result.Response.User).haveOwnProperty('Id')
+  expect(result.Response.User).haveOwnProperty('Name')
 })

@@ -1,6 +1,8 @@
 import type { FetchApi } from '@/helpers/fetch'
 
-import type { ProjectListResponse, ProjectsListParams } from './types'
+import { fetchMe } from '../users'
+
+import type { ProjectListResponse, ProjectsListAllParams, ProjectsListByUserParams, ProjectsListByUserResponse } from './types'
 
 export class Projects {
   fetchApi: FetchApi
@@ -10,19 +12,34 @@ export class Projects {
   }
 
   /**
-   * 如果获取所有项目，需要注意是否有权限
+   * 获取所有项目，需要注意是否有权限
    *
-   * ref: https://coding.net/help/openapi#add1b386a4ce6a8ddc07fb10fff254e8
+   * ref: https://coding.net/help/openapi#/operations/DescribeCodingProjects#Request
    */
-  list(params: ProjectsListParams = {}) {
+  listAll(params: ProjectsListAllParams = {}) {
     const mergedParams = {
       PageNumber: 1,
       PageSize: 10,
       ...params,
-    } satisfies ProjectsListParams
+    } satisfies ProjectsListAllParams
 
     return this.fetchApi.run<ProjectListResponse>({
       body: { Action: 'DescribeCodingProjects', ...mergedParams },
     })
+  }
+
+  listByUser(params: ProjectsListByUserParams) {
+    const mergedParams = {
+      ...params,
+    } satisfies ProjectsListByUserParams
+
+    return this.fetchApi.run<ProjectsListByUserResponse>({
+      body: { Action: 'DescribeUserProjects', ...mergedParams },
+    })
+  }
+
+  async list() {
+    const me = await fetchMe(this.fetchApi)
+    return this.listByUser({ UserId: me.Response.User.Id })
   }
 }

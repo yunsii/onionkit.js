@@ -1,6 +1,6 @@
 import { FetchApi } from './helpers/fetch'
+import { Depots } from './modules/depots'
 import { Projects } from './modules/projects'
-import { Releases } from './modules/releases'
 import { fetchMe } from './modules/users'
 
 export interface OnionkitInit {
@@ -13,12 +13,12 @@ export class Onionkit {
 
   projects: Projects
 
-  releases: Releases
+  depots: Depots
 
   constructor(options: OnionkitInit) {
     this.fetchApi = new FetchApi(options.token)
     this.projects = new Projects(this.fetchApi)
-    this.releases = new Releases(this.fetchApi)
+    this.depots = new Depots(this.fetchApi)
   }
 
   me() {

@@ -1,6 +1,6 @@
 import type { CodingResponse } from '@/types'
 
-export interface ProjectsListParams {
+export interface ProjectsListAllParams {
   /**
    * 页数
    *
@@ -17,7 +17,7 @@ export interface ProjectsListParams {
   ProjectName?: string
 }
 
-export interface ProjectListItem {
+export interface ProjectListAllItem {
   /** 项目 ID */
   Id: number
   /**
@@ -124,6 +124,37 @@ export interface ProjectListResponse
       PageNumber: number
       PageSize: number
       TotalCount: number
-      ProjectList: ProjectListItem[]
+      ProjectList: ProjectListAllItem[]
     }
+  }> {}
+
+export interface ProjectsListByUserParams {
+  UserId: number
+  /** 项目名称 */
+  ProjectName?: string
+}
+
+export interface ProjectsListByUserItem {
+  Name: string
+  Id: number
+  Type: number
+  DisplayName: string
+  Icon: string
+  Description: string
+  CreatedAt: number
+  MaxMember: number
+  TeamId: number
+  UserOwnerId: number
+  IsDemo: boolean
+  Archived: boolean
+  StartDate: number
+  UpdatedAt: number
+  TeamOwnerId: number
+  EndDate: number
+  Status: number
+}
+
+export interface ProjectsListByUserResponse
+  extends CodingResponse<{
+    ProjectList: ProjectsListByUserItem[]
   }> {}
