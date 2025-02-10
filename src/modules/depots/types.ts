@@ -180,6 +180,29 @@ export type DepotListReleasesParams = DepotDetailCoreParams & {
   Status?: number
 }
 
+export interface DepotListReleasesResponse
+  extends CodingResponse<{
+    ReleasePageList: {
+      Releases: {
+        Body: string
+        CommitSha: string
+        CreatedAt: number
+        CreatorId: number
+        DepotId: number
+        Html: string
+        Id: number
+        Pre: boolean
+        ProjectId: number
+        ReleaseId: number
+        TagName: string
+        TargetCommitBranch: string
+        Title: string
+        UpdatedAt: number
+      }[]
+      TotalCount: number
+    }
+  }> {}
+
 export type DepotCreateReleaseParams = DepotDetailCoreParams & {
   CommitSha: string
   Description: string

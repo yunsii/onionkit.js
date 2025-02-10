@@ -1,6 +1,6 @@
 import type { FetchApi } from '../../helpers/fetch'
 import type { CodingResponse } from '../../types'
-import type { DepotCommitsDifferentBetweenParams, DepotCommitsDifferentBetweenResponse, DepotCommitsParams, DepotCommitsResponse, DepotCreateReleaseParams, DepotDeleteReleaseParams, DepotDetailParams, DepotDetailResponse, DepotListParams, DepotListReleasesParams, DepotListResponse, DepotTagsParams, DepotTagsResponse } from './types'
+import type { DepotCommitsDifferentBetweenParams, DepotCommitsDifferentBetweenResponse, DepotCommitsParams, DepotCommitsResponse, DepotCreateReleaseParams, DepotDeleteReleaseParams, DepotDetailParams, DepotDetailResponse, DepotListParams, DepotListReleasesParams, DepotListReleasesResponse, DepotListResponse, DepotTagsParams, DepotTagsResponse } from './types'
 
 export class Depots {
   fetchApi: FetchApi
@@ -86,7 +86,7 @@ export class Depots {
       ...params,
     } satisfies DepotListReleasesParams
 
-    return this.fetchApi.run({
+    return this.fetchApi.run<DepotListReleasesResponse>({
       body: { Action: 'DescribeGitReleases', ...mergedParams },
     })
   }
