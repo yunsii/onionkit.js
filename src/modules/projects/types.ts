@@ -158,3 +158,40 @@ export interface ProjectsListByUserResponse
   extends CodingResponse<{
     ProjectList: ProjectsListByUserItem[]
   }> {}
+
+export interface ProjectsListMembersParams {
+  ProjectId: number
+  RoleId?: number
+  PageNumber?: number
+  PageSize?: number
+}
+
+export interface MemberRole {
+  RoleType: string
+  RoleId: number
+  RoleTypeName: string
+}
+
+export interface ProjectsListMembersItem {
+  Id: number
+  TeamId: number
+  Name: string
+  NamePinYin: string
+  Avatar: string
+  Email: string
+  Phone: string
+  EmailValidation: number
+  PhoneValidation: number
+  GlobalKey: string
+  Status: number
+  Roles: MemberRole[]
+}
+
+export type ProjectsListMembersResponse = CodingResponse<{
+  Data: {
+    PageNumber: number
+    PageSize: number
+    TotalCount: number
+    ProjectMembers: ProjectsListMembersItem[]
+  }
+}>

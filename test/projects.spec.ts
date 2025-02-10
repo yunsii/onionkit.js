@@ -17,3 +17,16 @@ it.skip(`根据项目名称获取项目详情`, async () => {
   })
   expect(result.Response).haveOwnProperty('Data')
 })
+
+it(`获取项目成员列表`, async () => {
+  const meResponse = await onionkit.me()
+  const myProjectsResponse = await onionkit.projects.listByUser({
+    UserId: meResponse.Response.User.Id,
+  })
+  const projectMembersResponse = await onionkit.projects.listMembers({
+    ProjectId: myProjectsResponse.Response.ProjectList[0].Id,
+  })
+  expect(projectMembersResponse.Response).toBeDefined()
+}, {
+  timeout: 10000,
+})

@@ -64,3 +64,11 @@ it(`获取仓库两个提交之间的提交列表`, async () => {
   })
   expect(commitsBetweenResponse.Response.DifferentOfCommitDetail).toBeDefined()
 })
+
+it(`获取仓库版本列表`, async () => {
+  const depotDetail = await getDepotDetail()
+  const releasesResponse = await onionkit.depots.listReleases({
+    DepotId: depotDetail.Response.Depot.Id,
+  })
+  expect(releasesResponse.Response.ReleasePageList).toBeDefined()
+})

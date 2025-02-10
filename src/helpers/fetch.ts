@@ -1,6 +1,9 @@
 import crossFetch from 'cross-fetch'
 
 import { makeApiPath } from './api'
+import { CodingError } from './errors'
+
+import type { CodingResponseError } from '../types'
 
 export function isRequestInfo(obj: any): obj is RequestInfo | URL {
   return typeof obj === 'string' || (typeof Request !== 'undefined' && obj instanceof Request) || obj instanceof URL
@@ -18,6 +21,14 @@ export function transformInit(init?: CustomRequestInit): RequestInit {
 
 export interface CustomRequestInit extends Omit<RequestInit, 'body'> {
   body?: Record<string, any>
+}
+
+export function isObject(obj: unknown): obj is Record<string, unknown> {
+  return typeof obj === 'object' && obj !== null
+}
+
+export function isCodingErrorResponse(response: unknown): response is CodingResponseError {
+  return !!(isObject(response) && 'Response' in response && isObject(response.Response) && 'Error' in response.Response)
 }
 
 export class FetchApi {
@@ -64,6 +75,10 @@ export class FetchApi {
     const response = await crossFetch(mergedInput, mergedInit)
 
     const result: T = await response.json()
+
+    if (isCodingErrorResponse(result)) {
+      throw new CodingError(result)
+    }
 
     return result
   }
