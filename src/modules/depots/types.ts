@@ -1,4 +1,4 @@
-import type { CodingResponse } from '@/types'
+import type { CodingResponse } from '../../types'
 
 export interface DepotListParams {
   ProjectId: number

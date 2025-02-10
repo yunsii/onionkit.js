@@ -1,7 +1,6 @@
-import type { FetchApi } from '@/helpers/fetch'
-
 import { fetchMe } from '../users'
 
+import type { FetchApi } from '../../helpers/fetch'
 import type { ProjectListResponse, ProjectsListAllParams, ProjectsListByUserParams, ProjectsListByUserResponse } from './types'
 
 export class Projects {

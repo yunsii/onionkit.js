@@ -1,6 +1,5 @@
-import type { FetchApi } from '@/helpers/fetch'
-import type { CodingResponse } from '@/types'
-
+import type { FetchApi } from '../../helpers/fetch'
+import type { CodingResponse } from '../../types'
 import type { DepotCommitsDifferentBetweenParams, DepotCommitsDifferentBetweenResponse, DepotCommitsParams, DepotCommitsResponse, DepotCreateReleaseParams, DepotDeleteReleaseParams, DepotDetailParams, DepotDetailResponse, DepotListParams, DepotListReleasesParams, DepotListResponse, DepotTagsParams, DepotTagsResponse } from './types'
 
 export class Depots {

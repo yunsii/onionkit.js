@@ -1,5 +1,5 @@
-import type { FetchApi } from '@/helpers/fetch'
-import type { CodingResponse } from '@/types'
+import type { FetchApi } from '../../helpers/fetch'
+import type { CodingResponse } from '../../types'
 
 export interface Me {
   Id: number
