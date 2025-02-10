@@ -1,5 +1,11 @@
 # onionkit
 
+## 0.0.1-beta.4
+
+### Patch Changes
+
+- ✨ feat: support list members of project
+
 ## 0.0.1-beta.3
 
 ### Patch Changes
