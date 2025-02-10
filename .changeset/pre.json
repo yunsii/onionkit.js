@@ -5,6 +5,7 @@
     "onionkit": "0.0.0"
   },
   "changesets": [
+    "angry-mayflies-bow",
     "curly-avocados-shop"
   ]
 }
