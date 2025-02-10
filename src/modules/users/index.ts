@@ -1,6 +1,6 @@
-import type { FetchApi } from '@/helpers/fetch'
-
 import { makeApiPath } from '@/helpers/api'
+
+import type { FetchApi } from '@/helpers/fetch'
 
 export interface Me {
   id: number

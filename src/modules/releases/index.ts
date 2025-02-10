@@ -1,5 +1,6 @@
-import type { ReleasesListParams } from './types'
 import type { FetchApi } from '@/helpers/fetch'
+
+import type { ReleasesListParams } from './types'
 
 export class Releases {
   fetchApi: FetchApi

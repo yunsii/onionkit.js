@@ -10,7 +10,7 @@ export function transformInit(init?: CustomRequestInit): RequestInit {
   if (init?.body) {
     return {
       ...init,
-      body: JSON.stringify(init.body)
+      body: JSON.stringify(init.body),
     }
   }
   return init as RequestInit

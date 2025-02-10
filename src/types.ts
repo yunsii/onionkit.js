@@ -4,8 +4,7 @@ export interface CodingResponse<
   Response: T extends undefined
     ? {
         RequestId: string
-      }
-    : T & {
+      } : T & {
         RequestId: string
       }
 }

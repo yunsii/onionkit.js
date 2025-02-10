@@ -1,5 +1,6 @@
-import type { ProjectListResponse, ProjectsListParams } from './types'
 import type { FetchApi } from '@/helpers/fetch'
+
+import type { ProjectListResponse, ProjectsListParams } from './types'
 
 export class Projects {
   fetchApi: FetchApi
@@ -8,9 +9,9 @@ export class Projects {
     this.fetchApi = fetch
   }
 
-  /** 
+  /**
    * 如果获取所有项目，需要注意是否有权限
-   * 
+   *
    * ref: https://coding.net/help/openapi#add1b386a4ce6a8ddc07fb10fff254e8
    */
   list(params: ProjectsListParams = {}) {
@@ -21,7 +22,7 @@ export class Projects {
     } satisfies ProjectsListParams
 
     return this.fetchApi.run<ProjectListResponse>({
-      body: { Action: 'DescribeCodingProjects',  ...mergedParams },
+      body: { Action: 'DescribeCodingProjects', ...mergedParams },
     })
   }
 }

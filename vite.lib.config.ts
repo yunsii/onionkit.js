@@ -1,12 +1,12 @@
-import path from 'path'
+import path from 'node:path'
 
 import { mergeConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
+import type { UserConfig } from 'vite'
+
 import { dependencies } from './package.json'
 import baseConfig from './vite.base.config'
-
-import type { UserConfig } from 'vite'
 
 const externalPackages = [...Object.keys(dependencies || {})]
 

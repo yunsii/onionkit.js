@@ -4,13 +4,13 @@ export interface ProjectsListParams {
   /**
    * 页数
    *
-   * * 自定义默认值 1
+   * 自定义默认值 1
    */
   PageNumber?: number
   /**
    * 每页条数
    *
-   * * 自定义默认值 10
+   * 自定义默认值 10
    */
   PageSize?: number
   /** 项目名称 */

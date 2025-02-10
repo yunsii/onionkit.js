@@ -1,7 +1,7 @@
 import { FetchApi } from './helpers/fetch'
-import { fetchMe } from './modules/users'
-import { Releases } from './modules/releases'
 import { Projects } from './modules/projects'
+import { Releases } from './modules/releases'
+import { fetchMe } from './modules/users'
 
 export interface OnionkitInit {
   /** 个人访问令牌，值得注意的是 CODING 的个人访问令牌与团队是绑定关系 */
