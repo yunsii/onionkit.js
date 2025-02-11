@@ -91,8 +91,8 @@ export interface DepotTagsResponse
         Sha: string
         ShortMessage: string
       }
-      Message: ''
-      TagName: '333'
+      Message: string
+      TagName: string
     }[]
   }> {}
 
