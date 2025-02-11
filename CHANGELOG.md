@@ -1,5 +1,11 @@
 # onionkit
 
+## 0.0.1-beta.7
+
+### Patch Changes
+
+- 🐛 fix: commits response page type
+
 ## 0.0.1-beta.6
 
 ### Patch Changes
