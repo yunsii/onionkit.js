@@ -71,20 +71,29 @@ export interface DepotDetailResponse
     }
   }> {}
 
-export interface DepotTagsParams {
-  DepotType: 'git' | 'svn'
-  Id: number
-  ProjectId: number
+export type DepotTagsParams = DepotDetailCoreParams & {
+  KeyWord?: string
+  Page?: number
+  PageSize?: number
 }
 
 export interface DepotTagsResponse
   extends CodingResponse<{
-    Data: {
-      DepotDetailList: {
-        Name: string
+    GitTags: {
+      Commit: {
+        AuthorEmail: string
+        AuthorName: string
+        CommitDate: number
+        CommitterEmail: string
+        CommitterName: string
+        CreatedAt: number
+        Parents: string[]
         Sha: string
-      }[]
-    }
+        ShortMessage: string
+      }
+      Message: ''
+      TagName: '333'
+    }[]
   }> {}
 
 export type DepotCommitsParams = (DepotDetailCoreParams) & {

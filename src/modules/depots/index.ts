@@ -42,7 +42,7 @@ export class Depots {
     } satisfies DepotTagsParams
 
     return this.fetchApi.run<DepotTagsResponse>({
-      body: { Action: 'DescribeProjectDepotTags', ...mergedParams },
+      body: { Action: 'DescribeGitTags', ...mergedParams },
     })
   }
 

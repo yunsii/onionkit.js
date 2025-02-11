@@ -28,11 +28,9 @@ it(`根据仓库路径获取仓库信息`, async () => {
 it(`获取仓库标签列表`, async () => {
   const depotDetail = await getDepotDetail()
   const tagsResponse = await onionkit.depots.tags({
-    DepotType: depotDetail.Response.Depot.RepoType,
-    Id: depotDetail.Response.Depot.Id,
-    ProjectId: depotDetail.Response.Depot.ProjectId,
+    DepotId: depotDetail.Response.Depot.Id,
   })
-  expect(tagsResponse.Response.Data.DepotDetailList).toBeDefined()
+  expect(tagsResponse.Response.GitTags).toBeDefined()
 })
 
 it(`获取仓库提交列表`, async () => {
@@ -47,16 +45,14 @@ it(`获取仓库提交列表`, async () => {
 it(`获取仓库两个提交之间的提交列表`, async () => {
   const depotDetail = await getDepotDetail()
   const tagsResponse = await onionkit.depots.tags({
-    DepotType: depotDetail.Response.Depot.RepoType,
-    Id: depotDetail.Response.Depot.Id,
-    ProjectId: depotDetail.Response.Depot.ProjectId,
+    DepotId: depotDetail.Response.Depot.Id,
   })
   const commitsResponse = await onionkit.depots.commits({
     DepotId: depotDetail.Response.Depot.Id,
     Ref: 'master',
   })
   const source = commitsResponse.Response.Data.Commits[0].Sha
-  const target = tagsResponse.Response.Data.DepotDetailList[0].Sha
+  const target = tagsResponse.Response.GitTags[0].Commit.Sha
   const commitsBetweenResponse = await onionkit.depots.commitsDifferentBetween({
     DepotId: depotDetail.Response.Depot.Id,
     Source: source,
