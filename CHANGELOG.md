@@ -1,5 +1,11 @@
 # onionkit
 
+## 0.0.1-beta.6
+
+### Patch Changes
+
+- 🐛 fix: update depot tags response type
+
 ## 0.0.1-beta.5
 
 ### Patch Changes
