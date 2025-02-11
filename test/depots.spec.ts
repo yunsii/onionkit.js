@@ -40,6 +40,7 @@ it(`获取仓库提交列表`, async () => {
     Ref: 'master',
   })
   expect(commitsResponse.Response.Data.Commits).toBeDefined()
+  expect(commitsResponse.Response.Data.Page).toBeDefined()
 })
 
 it(`获取仓库两个提交之间的提交列表`, async () => {

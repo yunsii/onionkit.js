@@ -131,12 +131,12 @@ export interface DepotCommitsResponse
         Name: string
         Sha: string
       }[]
-    }
-    Page: {
-      PageNumber: number
-      PageSize: number
-      TotalPage: number
-      TotalRow: number
+      Page: {
+        PageNumber: number
+        PageSize: number
+        TotalPage: number
+        TotalRow: number
+      }
     }
   }> {}
 
